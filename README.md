@@ -13,3 +13,9 @@
 - ![#bca430](https://placehold.co/15x15/bca430/bca430.png) `bca430` , `RGB: 188, 164, 48`
 - ![#feda00](https://placehold.co/15x15/feda00/feda00.png) `feda00` , `RGB: 254, 218, 0`
 - ![#017992](https://placehold.co/15x15/017992/017992.png) `017992` , `RGB: 1, 121, 146`
+
+### Type
+
+GA's sans-serif is `Circular` which isn't free but their font-stack includes `Helvetica` and `Arial` as fallbacks.
+
+Similarly, their serif font is `News 706` which also isn't free but their font-stack for this includes `Georgia` as a fallback.
