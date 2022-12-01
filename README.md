@@ -1,4 +1,14 @@
-# teacherHub_backend
+# GA teacher's hub
+
+The aim of our project is to develop a hub/portal for instructors to maintain class records--including enrolled students and their assignements--in one place.
+
+## Entity relationships
+
+The app will enable professors full CRUD ability. First they'll be able to register as a user, add classes, add students to their classes, and add assignments.
+
+## Tentative component heirarchy
+
+The app will be built with React.js leveraging protected routes and conditional rendering.
 
 ## Styleguide
 
@@ -19,3 +29,7 @@
 GA's sans-serif is `Circular` which isn't free but their font-stack includes `Helvetica` and `Arial` as fallbacks.
 
 Similarly, their serif font is `News 706` which also isn't free but their font-stack for this includes `Georgia` as a fallback.
+
+## Stretch goals
+
+Our main goal is to create a hub for professors but if we complete this successfully and with leftover time we would like to have users with different levels of permissions, including TAs and students (the latter of which would only be able to view their own assignements list and update their github URL and deplyoyed URL fields).
