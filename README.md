@@ -6,11 +6,33 @@ The aim of our project is to develop a hub/portal for instructors to maintain cl
 
 The app will enable professors full CRUD ability. First they'll be able to register as a user, add classes, add students to their classes, and add assignments.
 
+![ERD](/readmeAssets/teacherHub_erd.png)
+
 ## Tentative component heirarchy
 
 The app will be built with React.js leveraging protected routes and conditional rendering.
 
+![CHD](/readmeAssets/teacherHubCHD.png)
+
+## Wireframes / Concepting
+
+A general idea/medium res wireframe for the look and feel of different app pages and features.
+
+### Sign in page
+![sign-in](/readmeAssets/signin.png)
+
+### Class portal
+![class portal](/readmeAssets/portal.png)
+
+### Add a class
+![add a class](/readmeAssets/addClass.png)
+
+### Add a student
+![add a student](/readmeAssets/addStudent.png)
+
 ## Styleguide
+
+Since the branding of our project revolves around GAs brand its best to avoid arbitrary departures from the look and feel of General Assembly's own website. Below are recommendation on colors and typography to ensure group is on the same page and will develop a cohesive project.
 
 ### Colors
 
