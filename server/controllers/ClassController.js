@@ -41,7 +41,9 @@ const UpdateClass = async (req, res) => {
 const DeleteClass = async (req, res) => {
     try {
         let classId = parseInt(req.params.class_id)
+        let cohort = await Cohort.findAll({where:{id:classId}});
         await Cohort.destroy({where:{id:classId}})
+        res.send({msg: `Deleted class ${cohort[0].name} with id of ${classId}`})
     } catch (error) {
     throw error  
     }

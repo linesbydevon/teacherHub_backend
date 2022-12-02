@@ -6,7 +6,7 @@ const AssignmentRouter = require("./AssignmentRouter")
 const AuthRouter = require("./AuthRouter")
 
 Router.use("/teachers",TeacherRouter)
-// Router.use("/classes",ClassRouter)
+Router.use("/classes",ClassRouter)
 // Router.use("/students",StudentRouter)
 // Router.use("/assignments",AssignmentRouter)
 
