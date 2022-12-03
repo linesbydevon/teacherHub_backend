@@ -11,6 +11,16 @@ const FindAllClasses = async (req, res) => {
 
 }
 
+const FindAllClassesByTeacher = async (req,res)=>{
+    try {
+        let teacherId = parseInt(req.params.teacher_id)
+        const classes = await Cohort.findAll({where:{teacherId: teacherId}});
+        res.send(classes)
+      } catch (error) {
+        throw error;
+      }
+}
+
 
 const CreateClass = async (req, res) => {
     try {
@@ -60,6 +70,7 @@ const DeleteClass = async (req, res) => {
 module.exports = {
     CreateClass,
     FindAllClasses,
+    FindAllClassesByTeacher,
     UpdateClass,
     DeleteClass
 }
