@@ -1,9 +1,9 @@
-const { Teacher, Student } = require('../models')
+const { Teacher } = require('../models')
 const middleware = require('../middleware')
 
 const Login = async (req, res) => {
   try {
-    const user = await User.findOne({
+    const user = await Teacher.findOne({
       where: { email: req.body.email },
       raw: true
     })
@@ -24,35 +24,21 @@ const Login = async (req, res) => {
   }
 }
 
-// const Register = async (req, res) => {
-//   try {
-//     const { firstName, lastName, email, password } = req.body
-//     let passwordDigest = await middleware.hashPassword(password);
-//     let user = {msg: 'You must have an @generalassemb.ly email account to register here.'}
-//     if (req.body.email.includes('@generalassemb.ly')){
-//       user = await Teacher.create({ firstName, lastName, email, passwordDigest })
-//     }
-//     res.send(user)
-//   } catch (error) {
-//     throw error
-//   }
-// }
-
 const Register = async (req, res) => {
   try {
     const { firstName, lastName, email, password } = req.body
     let passwordDigest = await middleware.hashPassword(password);
-    let user = {msg: 'Something went wrong'}
+    let user = {msg: 'You must have an @generalassemb.ly email account to register here.'}
     if (req.body.email.includes('@generalassemb.ly')){
       user = await Teacher.create({ firstName, lastName, email, passwordDigest })
-    } else if (req.body.email.includes('@')){
-      user = await Student.create({ firstName, lastName, email, passwordDigest })
     }
     res.send(user)
   } catch (error) {
     throw error
   }
 }
+
+
 
 
 const UpdatePassword = async (req, res) => {
