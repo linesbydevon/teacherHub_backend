@@ -50,9 +50,9 @@ const UpdateAssignment = async (req, res) => {
 
 const DeleteAssignment = async (req,res)=>{
   try {
-    let assignmentId = parseInt(req.params.student_id)
-    let assignment = await Assignment.findAll({where:{id:studentId}});
-    await Assignment.destroy({where:{id:studentId}})
+    let assignmentId = parseInt(req.params.assignment_id)
+    let assignment = await Assignment.findAll({where:{id:assignmentId}});
+    await Assignment.destroy({where:{id:assignmentId}})
     res.send({msg: `Deleted assignment ${assignment[0].name} with id of ${assignmentId}`})
   } catch (error) {
    throw error; 
