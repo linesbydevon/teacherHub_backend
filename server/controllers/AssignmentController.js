@@ -12,7 +12,7 @@ const FindAllAssignments = async (req, res) => {
 
 const FindAllAssignmentsByStudent = async (req,res) =>{
   try {
-    let studentId = parseInt(req.params.class_id)
+    let studentId = parseInt(req.params.student_id)
     const assignments = await Assignment.findAll({where:{studentId: studentId}});
     res.send(assignments)
   } catch (error) {
